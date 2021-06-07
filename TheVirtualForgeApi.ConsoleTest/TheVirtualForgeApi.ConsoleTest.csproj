@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+
+    <AssemblyName>TheVirtualForgeApi.Test</AssemblyName>
+
+    <OutputType>Exe</OutputType>
+
+    <StartupObject>TheVirtualForgeApi.ConsoleTest.Program</StartupObject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TheVirtualForgeApi.ApplicationCore\TheVirtualForgeApi.ApplicationCore.csproj" />
+    <ProjectReference Include="..\TheVirtualForgeApi.Infrastructure\TheVirtualForgeApi.Infrastructure.csproj" />
+    <ProjectReference Include="..\TheVirtualForgeApi\TheVirtualForgeApi.csproj" />
+  </ItemGroup>
+
+</Project>
