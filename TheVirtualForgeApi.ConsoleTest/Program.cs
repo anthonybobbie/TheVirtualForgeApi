@@ -116,10 +116,10 @@ namespace TheVirtualForgeApi.ConsoleTest
             var newAlbum = new Album() { AlbumTypeID = 1, ArtistName = "Donnie McClurkin", Title = "Great is your mercy", Stock = 5 };
             var albumJson = new StringContent(JsonConvert.SerializeObject(newAlbum), Encoding.UTF8, "application/json");
             var response = httpClient.PostAsync($"/api/v1/album", albumJson).Result;
-            if (response.StatusCode == System.Net.HttpStatusCode.OK)
+            if (response.StatusCode == System.Net.HttpStatusCode.Created)
             {
                 var albumsString = response.Content.ReadAsStringAsync().Result;
-                var responseObjectDTO = JsonConvert.DeserializeObject<ResponseObjectDTO<Album>>(albumsString);
+                var responseObjectDTO = JsonConvert.DeserializeObject<ResponseObjectDTO<int>>(albumsString);
                 var album = responseObjectDTO.Data;
                 Console.WriteLine($"Album successfully created");
             }
