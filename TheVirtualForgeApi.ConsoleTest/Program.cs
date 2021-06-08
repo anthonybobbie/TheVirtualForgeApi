@@ -16,13 +16,23 @@ namespace TheVirtualForgeApi.ConsoleTest
     public class Program
     {
         static HttpClient httpClient = new HttpClient();
-        static Uri uri = new Uri("https://LocalHost/443");
+        static Uri uri = new Uri("https://localhost:44342");
         static int Main(string[] args)
         {
+            httpClient.BaseAddress = uri;
             //Get albums from controller
+            
+            Console.WriteLine("*****************getting single album ****************");
             GetSingleAlbumsAsync();
-            Console.WriteLine("I am testing api endpoints");
-            Console.ReadLine();
+            Console.WriteLine("*****************getting all albums ****************");
+            GetAlbumsAsync();
+            Console.WriteLine("*****************deleting album ****************");
+            DeleteAlbumAsync();
+            Console.WriteLine("*****************creating new album ****************");
+            PostAlbumAsync();
+            Console.WriteLine("*****************updating single album ****************");
+            UpdateAlbumAsync();
+            Console.ReadKey();
             return 0;
         }
         /// <summary>
@@ -30,8 +40,9 @@ namespace TheVirtualForgeApi.ConsoleTest
         /// </summary>
         private static void GetSingleAlbumsAsync()
         {
-            var response =  httpClient.GetAsync("/api/v1/album/artist?title=Great is your mercy&artistName=Donnie McClurkin").Result;
-            if (response.StatusCode== System.Net.HttpStatusCode.OK)
+
+            var response = httpClient.GetAsync("/api/v1/album/artist?title=Morning love&artistName=David Bowie").Result;
+            if (response.StatusCode == System.Net.HttpStatusCode.OK)
             {
                 var albumsString = response.Content.ReadAsStringAsync().Result;
                 var responseObjectDTO = JsonConvert.DeserializeObject<ResponseObjectDTO<AlbumDTO>>(albumsString);
@@ -51,15 +62,18 @@ namespace TheVirtualForgeApi.ConsoleTest
         /// </summary>
         private static void GetAlbumsAsync()
         {
-           
-            httpClient.BaseAddress = uri;
+
+
             var response = httpClient.GetAsync("/api/v1/album").Result;
             if (response.StatusCode == System.Net.HttpStatusCode.OK)
             {
                 var albumsString = response.Content.ReadAsStringAsync().Result;
-                var responseObjectDTO = JsonConvert.DeserializeObject<ResponseObjectDTO<AlbumDTO>>(albumsString);
-                var album = responseObjectDTO.Data;
-                Console.WriteLine($"{album.ArtistName} album title {album.Title} is available in {album.AlbumType} and has stock quantity {album.Stock}");
+                var responseObjectDTO = JsonConvert.DeserializeObject<ResponseObjectDTO<List<Album>>>(albumsString);
+                var albums = responseObjectDTO.Data;
+                foreach (var album in albums)
+                {
+                    Console.WriteLine($"{album.ArtistName} album title {album.Title} is available in type {album.AlbumTypeID} and has stock quantity {album.Stock}");
+                }
             }
             else
             {
@@ -75,7 +89,7 @@ namespace TheVirtualForgeApi.ConsoleTest
         private static void DeleteAlbumAsync()
         {
             int albumID = 1;
-            httpClient.BaseAddress = uri;
+
             var response = httpClient.DeleteAsync($"/api/v1/album/{albumID}").Result;
             if (response.StatusCode == System.Net.HttpStatusCode.OK)
             {
@@ -92,16 +106,16 @@ namespace TheVirtualForgeApi.ConsoleTest
 
             }
         }
-       /// <summary>
-       /// create a new album
-       /// </summary>
+        /// <summary>
+        /// create a new album
+        /// </summary>
         private static void PostAlbumAsync()
         {
-          
-            httpClient.BaseAddress = uri;
+
+
             var newAlbum = new Album() { AlbumTypeID = 1, ArtistName = "Donnie McClurkin", Title = "Great is your mercy", Stock = 5 };
             var albumJson = new StringContent(JsonConvert.SerializeObject(newAlbum), Encoding.UTF8, "application/json");
-            var response = httpClient.PostAsync($"/api/v1/album",albumJson).Result;
+            var response = httpClient.PostAsync($"/api/v1/album", albumJson).Result;
             if (response.StatusCode == System.Net.HttpStatusCode.OK)
             {
                 var albumsString = response.Content.ReadAsStringAsync().Result;
@@ -117,14 +131,14 @@ namespace TheVirtualForgeApi.ConsoleTest
 
             }
         }
-       /// <summary>
-       /// updated existing album
-       /// </summary>
+        /// <summary>
+        /// updated existing album
+        /// </summary>
         private static void UpdateAlbumAsync()
         {
 
-            httpClient.BaseAddress = uri;
-            var newAlbum = new Album() { AlbumTypeID = 1, ArtistName = "Donnie McClurkin", Title = "Great is your mercy", Stock =2 };
+
+            var newAlbum = new Album() { AlbumTypeID = 1, ArtistName = "Donnie McClurkin", Title = "Great is your mercy", Stock = 2 };
             var albumJson = new StringContent(JsonConvert.SerializeObject(newAlbum), Encoding.UTF8, "application/json");
             var response = httpClient.PutAsync($"/api/v1/album", albumJson).Result;
             if (response.StatusCode == System.Net.HttpStatusCode.OK)
