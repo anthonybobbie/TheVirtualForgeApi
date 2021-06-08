@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace TheVirtualForgeApi.ApplicationCore.DTO
 {
-    public class ResponseObjectDTO
+    public class ResponseObjectDTO<T>
     {
-        public object Data { get; set; }
+        public T Data { get; set; }
         public object Message { get; set; }
         public int StatusCode { get; set; }
     }

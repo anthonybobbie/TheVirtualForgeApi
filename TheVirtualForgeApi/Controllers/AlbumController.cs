@@ -22,13 +22,22 @@ namespace TheVirtualForgeApi.Controllers
             _logger = logger;
             this.albumRepository = albumRepository;
         }
+
         [HttpGet("album")]
-        public async Task<ActionResult> GetAlbums([FromQuery] string title, [FromQuery] string artistName)
+        public async Task<ActionResult> GetAlbums()
         {
             _logger.LogInformation("Getting album");
+            var response = await albumRepository.GetItemsAsync();
+            if (response == null) return DataResponse<List<Album>>(null);
+            return DataResponse<List<Album>>(response);
+        }
+        [HttpGet("album/artist")]
+        public async Task<ActionResult> GetAlbums([FromQuery] string title, [FromQuery] string artistName)
+        {
+            _logger.LogInformation("Getting album by title and artistName");
             var response = await albumRepository.GetItemsAsync(title, artistName);
-            if (response.Count()==0)return DataResponse<List<AlbumDTO>>(null);
-            return DataResponse<List<AlbumDTO>>(response);
+            if (response==null)return DataResponse<AlbumDTO>(null);
+            return DataResponse<AlbumDTO>(response);
         }
 
         [HttpDelete("album/{Id:int}")]

@@ -12,14 +12,14 @@ namespace TheVirtualForgeApi.Controllers
             switch (statusCode)
             {
                 case 201:
-                    return CreatedAtAction(actionName, new ResponseObjectDTO()
+                    return CreatedAtAction(actionName, new ResponseObjectDTO<T>()
                     {
                         Data = item,
                         Message = null,
                         StatusCode = 201
                     });
                 default:
-                    return Ok(new ResponseObjectDTO()
+                    return Ok(new ResponseObjectDTO<T>()
                     {
                         Data = item,
                         Message = null,
@@ -28,37 +28,37 @@ namespace TheVirtualForgeApi.Controllers
             }
            
         }
-        public ActionResult<object> BadResponse<T>(T item, HttpStatusCode statusCode)
+        public ActionResult<ResponseObjectDTO<T>> BadResponse<T>(T item, HttpStatusCode statusCode)
         {
-            var response = new ResponseObjectDTO()
+            var response = new ResponseObjectDTO<T>()
             {
-                Data = null,
+                
                 Message = null,
                 StatusCode = (int)HttpStatusCode.OK
             };
             switch (statusCode)
             {
                 case HttpStatusCode.BadRequest:
-                    return BadRequest(new ResponseObjectDTO()
+                    return BadRequest(new ResponseObjectDTO<T>()
 
                     {
-                        Data = null,
+                        
                         Message = null,
                         StatusCode = (int)HttpStatusCode.BadRequest
                     });
                 case HttpStatusCode.Unauthorized:
-                  return  Unauthorized(new ResponseObjectDTO()
+                  return  Unauthorized(new ResponseObjectDTO<T>()
 
-                    {
-                        Data = null,
+                  {
+                        
                         Message = null,
                         StatusCode = (int)HttpStatusCode.Unauthorized
                     });
                 case HttpStatusCode.NotFound:
-                    return NotFound(new ResponseObjectDTO()
+                    return NotFound(new ResponseObjectDTO<T>()
 
                     {
-                        Data = null,
+                       
                         Message = null,
                         StatusCode = (int)HttpStatusCode.NotFound
                     });

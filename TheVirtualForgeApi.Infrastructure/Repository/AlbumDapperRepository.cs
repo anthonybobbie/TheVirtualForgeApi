@@ -59,7 +59,7 @@ namespace TheVirtualForgeApi.Infrastructure.Repository
             return response;
         }
 
-        public async Task<List<AlbumDTO>> GetItemsAsync(string title, string artistName)
+        public async Task<AlbumDTO> GetItemsAsync(string title, string artistName)
         {
             logger.LogInformation("Getting album ");
             string strquery = $@"
@@ -71,7 +71,8 @@ namespace TheVirtualForgeApi.Infrastructure.Repository
             DynamicParameters parameters = new DynamicParameters();
             parameters.Add("@title", title);
             parameters.Add("@artistName", artistName);
-            return await this.serviceClient.ExecuteAsync<AlbumDTO>(strquery, parameters);
+            var response= await this.serviceClient.ExecuteAsync<AlbumDTO>(strquery, parameters);
+            return response.FirstOrDefault();
         }
 
         public async Task<Album> UpdateItemAsync(Album item)

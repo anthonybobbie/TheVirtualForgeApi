@@ -14,7 +14,7 @@ namespace TheVirtualForgeApi.ApplicationCore.Services
         Task<Album> UpdateItemAsync(Album item);
         Task<List<Album>> GetItemsAsync();
         Task<bool> DeleteItemAsync(int itemID);
-        Task<List<AlbumDTO>> GetItemsAsync(string title, string artistName);
+        Task<AlbumDTO> GetItemsAsync(string title, string artistName);
         
     }
     
