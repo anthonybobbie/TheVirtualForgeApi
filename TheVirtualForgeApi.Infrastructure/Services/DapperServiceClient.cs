@@ -22,7 +22,8 @@ namespace TheVirtualForgeApi.Infrastructure.Services
             return await Task.Run(async () => {
                 using (var conn=new SqlConnection(configurationString))
                 {
-                    var response = await conn.QueryAsync<T>(strquery, parameters);
+                    conn.Open();
+                    var response = await conn.QueryAsync<T>(strquery, parameters,commandTimeout:20000);
                     return response.ToList();
                 }
             });

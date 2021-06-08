@@ -28,11 +28,11 @@ namespace TheVirtualForgeApi.Infrastructure.Repository
         {
             logger.LogInformation("Add new album");
             string strquery = $@"
-                                   INSERT INTO [dbo].[Album]([Title],[AlbumTypeID],[ArtistName],[Type],[Stock])
-                                   VALUES(@Title ,@AlbumTypeID ,@ArtistName,@Type ,@Stock )
+                                   INSERT INTO [dbo].[Album]([Title],[ArtistName], [AlbumTypeID],[Stock])
+                                   VALUES(@Title ,@ArtistName,@AlbumTypeID  ,@Stock )
                                ";
             DynamicParameters parameters = new DynamicParameters();
-            parameters.Add("@title", item.Title);
+            parameters.Add("@Title", item.Title);
             parameters.Add("@ArtistName", item.ArtistName);
             parameters.Add("@AlbumTypeID", item.AlbumTypeID);
             parameters.Add("@Stock", item.Stock);
@@ -43,7 +43,7 @@ namespace TheVirtualForgeApi.Infrastructure.Repository
         public async Task<bool> DeleteItemAsync(int Id)
         {
             logger.LogInformation("Deleting album ");
-            string strquery = $@"Delete From  FROM Album WHERE Id=@Id";
+            string strquery = $@"Delete FROM Album WHERE Id=@Id";
             DynamicParameters parameters = new DynamicParameters();
             parameters.Add("@Id", Id);
             await this.serviceClient.ExecuteSingleAsync(strquery, parameters);
@@ -81,9 +81,8 @@ namespace TheVirtualForgeApi.Infrastructure.Repository
             string strquery = $@"
                                   UPDATE [dbo].[Album]
                                   SET [Title] = @Title
-                                 ,[AlbumTypeID] = @AlbumTypeID
                                  ,[ArtistName] = @ArtistName
-                                 ,[Type] = @Type
+                                 ,[AlbumTypeID] = @AlbumTypeID
                                  ,[Stock] = @Stock
                                   WHERE [Id]=@Id
                                  ";
@@ -92,6 +91,7 @@ namespace TheVirtualForgeApi.Infrastructure.Repository
             parameters.Add("@ArtistName", item.ArtistName);
             parameters.Add("@AlbumTypeID", item.AlbumTypeID);
             parameters.Add("@Stock", item.Stock);
+            parameters.Add("@Id", item.Id);
             var response = await this.serviceClient.ExecuteAsync<Album>(strquery, parameters);
             return response.FirstOrDefault();
         }
