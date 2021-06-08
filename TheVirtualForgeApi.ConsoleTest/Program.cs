@@ -21,7 +21,7 @@ namespace TheVirtualForgeApi.ConsoleTest
         {
             httpClient.BaseAddress = uri;
             //Get albums from controller
-            
+
             Console.WriteLine("*****************getting single album ****************");
             GetSingleAlbumsAsync();
             Console.WriteLine("*****************getting all albums ****************");
@@ -47,7 +47,15 @@ namespace TheVirtualForgeApi.ConsoleTest
                 var albumsString = response.Content.ReadAsStringAsync().Result;
                 var responseObjectDTO = JsonConvert.DeserializeObject<ResponseObjectDTO<AlbumDTO>>(albumsString);
                 var album = responseObjectDTO.Data;
-                Console.WriteLine($"{album.ArtistName} album title {album.Title} is available in {album.AlbumType} and has stock quantity {album.Stock}");
+                if (responseObjectDTO.Data != null)
+                {
+                    Console.WriteLine($"{album.ArtistName} album title {album.Title} is available in {album.AlbumType} and has stock quantity {album.Stock}");
+
+                }
+                else
+                {
+                    Console.WriteLine($"No match found");
+                }
             }
             else
             {
