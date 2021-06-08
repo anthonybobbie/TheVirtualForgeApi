@@ -41,7 +41,7 @@ namespace TheVirtualForgeApi.ConsoleTest
         private static void GetSingleAlbumsAsync()
         {
 
-            var response = httpClient.GetAsync("/api/v1/album/artist?title=Morning love&artistName=David Bowie").Result;
+            var response = httpClient.GetAsync("/api/v1/album/artist?title=Burning love&artistName=Elvis Presley").Result;
             if (response.StatusCode == System.Net.HttpStatusCode.OK)
             {
                 var albumsString = response.Content.ReadAsStringAsync().Result;
@@ -113,7 +113,7 @@ namespace TheVirtualForgeApi.ConsoleTest
         {
 
 
-            var newAlbum = new Album() { AlbumTypeID = 1, ArtistName = "Donnie McClurkin", Title = "Great is your mercy", Stock = 5 };
+            var newAlbum = new Album() { AlbumTypeID = 1, ArtistName = "Donnie McClurkin", Title = "I Need you", Stock = 5 };
             var albumJson = new StringContent(JsonConvert.SerializeObject(newAlbum), Encoding.UTF8, "application/json");
             var response = httpClient.PostAsync($"/api/v1/album", albumJson).Result;
             if (response.StatusCode == System.Net.HttpStatusCode.Created)

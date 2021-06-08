@@ -1,21 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\BobbieA\\Downloads\\the forge\\TheVirtualForgeApi\\TheVirtualForgeApi.ConsoleTest\\TheVirtualForgeApi.ConsoleTest.csproj": {}
+    "D:\\Job Test\\TheVirtualForge\\TheVirtualForgeApi.ConsoleTest\\TheVirtualForgeApi.ConsoleTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\BobbieA\\Downloads\\the forge\\TheVirtualForgeApi\\TheVirtualForgeApi.ApplicationCore\\TheVirtualForgeApi.ApplicationCore.csproj": {
+    "D:\\Job Test\\TheVirtualForge\\TheVirtualForgeApi.ApplicationCore\\TheVirtualForgeApi.ApplicationCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\BobbieA\\Downloads\\the forge\\TheVirtualForgeApi\\TheVirtualForgeApi.ApplicationCore\\TheVirtualForgeApi.ApplicationCore.csproj",
+        "projectUniqueName": "D:\\Job Test\\TheVirtualForge\\TheVirtualForgeApi.ApplicationCore\\TheVirtualForgeApi.ApplicationCore.csproj",
         "projectName": "TheVirtualForgeApi.ApplicationCore",
-        "projectPath": "C:\\Users\\BobbieA\\Downloads\\the forge\\TheVirtualForgeApi\\TheVirtualForgeApi.ApplicationCore\\TheVirtualForgeApi.ApplicationCore.csproj",
-        "packagesPath": "C:\\Users\\BobbieA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\BobbieA\\Downloads\\the forge\\TheVirtualForgeApi\\TheVirtualForgeApi.ApplicationCore\\obj\\",
+        "projectPath": "D:\\Job Test\\TheVirtualForge\\TheVirtualForgeApi.ApplicationCore\\TheVirtualForgeApi.ApplicationCore.csproj",
+        "packagesPath": "C:\\Users\\antho\\.nuget\\packages\\",
+        "outputPath": "D:\\Job Test\\TheVirtualForge\\TheVirtualForgeApi.ApplicationCore\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\BobbieA\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\antho\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -58,18 +62,22 @@
         }
       }
     },
-    "C:\\Users\\BobbieA\\Downloads\\the forge\\TheVirtualForgeApi\\TheVirtualForgeApi.ConsoleTest\\TheVirtualForgeApi.ConsoleTest.csproj": {
+    "D:\\Job Test\\TheVirtualForge\\TheVirtualForgeApi.ConsoleTest\\TheVirtualForgeApi.ConsoleTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\BobbieA\\Downloads\\the forge\\TheVirtualForgeApi\\TheVirtualForgeApi.ConsoleTest\\TheVirtualForgeApi.ConsoleTest.csproj",
+        "projectUniqueName": "D:\\Job Test\\TheVirtualForge\\TheVirtualForgeApi.ConsoleTest\\TheVirtualForgeApi.ConsoleTest.csproj",
         "projectName": "TheVirtualForgeApi.Test",
-        "projectPath": "C:\\Users\\BobbieA\\Downloads\\the forge\\TheVirtualForgeApi\\TheVirtualForgeApi.ConsoleTest\\TheVirtualForgeApi.ConsoleTest.csproj",
-        "packagesPath": "C:\\Users\\BobbieA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\BobbieA\\Downloads\\the forge\\TheVirtualForgeApi\\TheVirtualForgeApi.ConsoleTest\\obj\\",
+        "projectPath": "D:\\Job Test\\TheVirtualForge\\TheVirtualForgeApi.ConsoleTest\\TheVirtualForgeApi.ConsoleTest.csproj",
+        "packagesPath": "C:\\Users\\antho\\.nuget\\packages\\",
+        "outputPath": "D:\\Job Test\\TheVirtualForge\\TheVirtualForgeApi.ConsoleTest\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\BobbieA\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\antho\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -82,14 +90,14 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\BobbieA\\Downloads\\the forge\\TheVirtualForgeApi\\TheVirtualForgeApi.ApplicationCore\\TheVirtualForgeApi.ApplicationCore.csproj": {
-                "projectPath": "C:\\Users\\BobbieA\\Downloads\\the forge\\TheVirtualForgeApi\\TheVirtualForgeApi.ApplicationCore\\TheVirtualForgeApi.ApplicationCore.csproj"
+              "D:\\Job Test\\TheVirtualForge\\TheVirtualForgeApi.ApplicationCore\\TheVirtualForgeApi.ApplicationCore.csproj": {
+                "projectPath": "D:\\Job Test\\TheVirtualForge\\TheVirtualForgeApi.ApplicationCore\\TheVirtualForgeApi.ApplicationCore.csproj"
               },
-              "C:\\Users\\BobbieA\\Downloads\\the forge\\TheVirtualForgeApi\\TheVirtualForgeApi.Infrastructure\\TheVirtualForgeApi.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\BobbieA\\Downloads\\the forge\\TheVirtualForgeApi\\TheVirtualForgeApi.Infrastructure\\TheVirtualForgeApi.Infrastructure.csproj"
+              "D:\\Job Test\\TheVirtualForge\\TheVirtualForgeApi.Infrastructure\\TheVirtualForgeApi.Infrastructure.csproj": {
+                "projectPath": "D:\\Job Test\\TheVirtualForge\\TheVirtualForgeApi.Infrastructure\\TheVirtualForgeApi.Infrastructure.csproj"
               },
-              "C:\\Users\\BobbieA\\Downloads\\the forge\\TheVirtualForgeApi\\TheVirtualForgeApi\\TheVirtualForgeApi.csproj": {
-                "projectPath": "C:\\Users\\BobbieA\\Downloads\\the forge\\TheVirtualForgeApi\\TheVirtualForgeApi\\TheVirtualForgeApi.csproj"
+              "D:\\Job Test\\TheVirtualForge\\TheVirtualForgeApi\\TheVirtualForgeApi.csproj": {
+                "projectPath": "D:\\Job Test\\TheVirtualForge\\TheVirtualForgeApi\\TheVirtualForgeApi.csproj"
               }
             }
           }
@@ -128,18 +136,22 @@
         }
       }
     },
-    "C:\\Users\\BobbieA\\Downloads\\the forge\\TheVirtualForgeApi\\TheVirtualForgeApi.Infrastructure\\TheVirtualForgeApi.Infrastructure.csproj": {
+    "D:\\Job Test\\TheVirtualForge\\TheVirtualForgeApi.Infrastructure\\TheVirtualForgeApi.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\BobbieA\\Downloads\\the forge\\TheVirtualForgeApi\\TheVirtualForgeApi.Infrastructure\\TheVirtualForgeApi.Infrastructure.csproj",
+        "projectUniqueName": "D:\\Job Test\\TheVirtualForge\\TheVirtualForgeApi.Infrastructure\\TheVirtualForgeApi.Infrastructure.csproj",
         "projectName": "TheVirtualForgeApi.Infrastructure",
-        "projectPath": "C:\\Users\\BobbieA\\Downloads\\the forge\\TheVirtualForgeApi\\TheVirtualForgeApi.Infrastructure\\TheVirtualForgeApi.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\BobbieA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\BobbieA\\Downloads\\the forge\\TheVirtualForgeApi\\TheVirtualForgeApi.Infrastructure\\obj\\",
+        "projectPath": "D:\\Job Test\\TheVirtualForge\\TheVirtualForgeApi.Infrastructure\\TheVirtualForgeApi.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\antho\\.nuget\\packages\\",
+        "outputPath": "D:\\Job Test\\TheVirtualForge\\TheVirtualForgeApi.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\BobbieA\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\antho\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -152,8 +164,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\BobbieA\\Downloads\\the forge\\TheVirtualForgeApi\\TheVirtualForgeApi.ApplicationCore\\TheVirtualForgeApi.ApplicationCore.csproj": {
-                "projectPath": "C:\\Users\\BobbieA\\Downloads\\the forge\\TheVirtualForgeApi\\TheVirtualForgeApi.ApplicationCore\\TheVirtualForgeApi.ApplicationCore.csproj"
+              "D:\\Job Test\\TheVirtualForge\\TheVirtualForgeApi.ApplicationCore\\TheVirtualForgeApi.ApplicationCore.csproj": {
+                "projectPath": "D:\\Job Test\\TheVirtualForge\\TheVirtualForgeApi.ApplicationCore\\TheVirtualForgeApi.ApplicationCore.csproj"
               }
             }
           }
@@ -208,18 +220,22 @@
         }
       }
     },
-    "C:\\Users\\BobbieA\\Downloads\\the forge\\TheVirtualForgeApi\\TheVirtualForgeApi\\TheVirtualForgeApi.csproj": {
+    "D:\\Job Test\\TheVirtualForge\\TheVirtualForgeApi\\TheVirtualForgeApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\BobbieA\\Downloads\\the forge\\TheVirtualForgeApi\\TheVirtualForgeApi\\TheVirtualForgeApi.csproj",
+        "projectUniqueName": "D:\\Job Test\\TheVirtualForge\\TheVirtualForgeApi\\TheVirtualForgeApi.csproj",
         "projectName": "TheVirtualForgeApi",
-        "projectPath": "C:\\Users\\BobbieA\\Downloads\\the forge\\TheVirtualForgeApi\\TheVirtualForgeApi\\TheVirtualForgeApi.csproj",
-        "packagesPath": "C:\\Users\\BobbieA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\BobbieA\\Downloads\\the forge\\TheVirtualForgeApi\\TheVirtualForgeApi\\obj\\",
+        "projectPath": "D:\\Job Test\\TheVirtualForge\\TheVirtualForgeApi\\TheVirtualForgeApi.csproj",
+        "packagesPath": "C:\\Users\\antho\\.nuget\\packages\\",
+        "outputPath": "D:\\Job Test\\TheVirtualForge\\TheVirtualForgeApi\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\BobbieA\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\antho\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -232,11 +248,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\BobbieA\\Downloads\\the forge\\TheVirtualForgeApi\\TheVirtualForgeApi.ApplicationCore\\TheVirtualForgeApi.ApplicationCore.csproj": {
-                "projectPath": "C:\\Users\\BobbieA\\Downloads\\the forge\\TheVirtualForgeApi\\TheVirtualForgeApi.ApplicationCore\\TheVirtualForgeApi.ApplicationCore.csproj"
+              "D:\\Job Test\\TheVirtualForge\\TheVirtualForgeApi.ApplicationCore\\TheVirtualForgeApi.ApplicationCore.csproj": {
+                "projectPath": "D:\\Job Test\\TheVirtualForge\\TheVirtualForgeApi.ApplicationCore\\TheVirtualForgeApi.ApplicationCore.csproj"
               },
-              "C:\\Users\\BobbieA\\Downloads\\the forge\\TheVirtualForgeApi\\TheVirtualForgeApi.Infrastructure\\TheVirtualForgeApi.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\BobbieA\\Downloads\\the forge\\TheVirtualForgeApi\\TheVirtualForgeApi.Infrastructure\\TheVirtualForgeApi.Infrastructure.csproj"
+              "D:\\Job Test\\TheVirtualForge\\TheVirtualForgeApi.Infrastructure\\TheVirtualForgeApi.Infrastructure.csproj": {
+                "projectPath": "D:\\Job Test\\TheVirtualForge\\TheVirtualForgeApi.Infrastructure\\TheVirtualForgeApi.Infrastructure.csproj"
               }
             }
           }
