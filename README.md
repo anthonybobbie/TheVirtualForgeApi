@@ -3,7 +3,7 @@ The API is layered  internally, this project's organization into multiple projec
 Units can be scaled up or out to take advantage of cloud-based on-demand scalability
 ## Application core 
 This project defines abstractions, or interfaces  which are then implemented by types defined in the Infrastructure layer
-## Infrastrure  
+## Infrastructure  
 This project contains the implementation of abstractions defined in the application core. It also contains entities and services for database interaction.
 ## Presentation  
 The Api project itself which applications interact with via endpoints
